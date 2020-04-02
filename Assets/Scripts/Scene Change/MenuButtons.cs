@@ -7,7 +7,7 @@ public class MenuButtons : MonoBehaviour
 {
     public void PlayGame()
     {
-
+        SceneManager.LoadScene(1);
     }
     public void GoHome()
     {
