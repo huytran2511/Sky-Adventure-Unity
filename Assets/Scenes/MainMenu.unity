@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 71866723}
   - component: {fileID: 71866722}
   - component: {fileID: 71866721}
-  - component: {fileID: 71866720}
   m_Layer: 5
   m_Name: HowTo
   m_TagString: Untagged
@@ -233,18 +232,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 25.070007}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &71866720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71866718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df29954af3184d34fa6dcab058c656f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &71866721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,7 +1027,6 @@ GameObject:
   - component: {fileID: 504896746}
   - component: {fileID: 504896745}
   - component: {fileID: 504896744}
-  - component: {fileID: 504896743}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1068,18 +1054,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -74.92999}
   m_SizeDelta: {x: 90, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &504896743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504896741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaef3e789beacfe488f22f666e9e8985, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &504896744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,9 +1097,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 504896743}
-        m_MethodName: GoHome
-        m_Mode: 1
+      - m_Target: {fileID: 839083757}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1015074899}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1999,7 +1984,6 @@ GameObject:
   - component: {fileID: 1057311208}
   - component: {fileID: 1057311207}
   - component: {fileID: 1057311206}
-  - component: {fileID: 1057311205}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -2027,18 +2011,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -24.929993}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1057311205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057311203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df29954af3184d34fa6dcab058c656f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1057311206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2764,7 +2736,6 @@ GameObject:
   - component: {fileID: 1548665564}
   - component: {fileID: 1548665563}
   - component: {fileID: 1548665562}
-  - component: {fileID: 1548665561}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -2792,18 +2763,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -74.92999}
   m_SizeDelta: {x: 90, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1548665561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548665559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaef3e789beacfe488f22f666e9e8985, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1548665562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2847,9 +2806,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548665561}
-        m_MethodName: GoHome
-        m_Mode: 1
+      - m_Target: {fileID: 839083757}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1472079783}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3359,7 +3329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8117647}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.74509805}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
