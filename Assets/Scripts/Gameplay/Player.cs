@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private Rigidbody2D playerBody;
     private Button jumpButton;
@@ -26,6 +26,10 @@ public class PlayerScript : MonoBehaviour
     {
         if(playerBody.velocity.y == 0)
         {
+            //if (Input.GetKeyDown("space"))
+            //{
+            //    playerBody.velocity = new Vector2(0, 10);
+            //}
             playerBody.velocity = new Vector2(0, 10);
         }
     }
