@@ -5,7 +5,7 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     private bool canMove;
-    private float distance = 5.975f;
+    private float distance = 6.475f;
     private float newDestination;
 
     void OnEnable()

@@ -8,7 +8,7 @@ public class GameMechanics : MonoBehaviour
 
     [SerializeField]
     private GameObject platform;
-    private float PLATFORM_DISTANCE = 6f;
+    private float PLATFORM_DISTANCE = 6.5f;
     private int platformCount;
     private float lastPlatformPositionY;
 
