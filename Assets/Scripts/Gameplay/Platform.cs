@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    private float leftBound = -2.89f, rightBound = 2.89f;
-    private float speed = 1f;
+    //private float leftBound = -3.36f, rightBound = 3.36f; // S size 0.4
+    //private float leftBound = -2.89f, rightBound = 2.89f; // M size 0.7
+    private float leftBound = -2.43f, rightBound = 2.43f; // L size 1
+    
+    private float speed = 1f; // slow
+    //private float speed = 2f; // medium
+    //private float speed = 3f; // fast
+
     private bool left;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         PlatformMovement();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();

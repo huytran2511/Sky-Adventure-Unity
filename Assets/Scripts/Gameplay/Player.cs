@@ -7,10 +7,13 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D playerBody;
     private Button jumpButton;
-    private bool hasJumped;
+    private bool hasJumped, platformBound;
+
+    public delegate void MoveCamera();
+    public static event MoveCamera move;
+
     private GameObject parent;
-        
-    // Start is called before the first frame update
+    
     void Awake()
     {
         jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
@@ -19,17 +22,24 @@ public class Player : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(hasJumped && playerBody.velocity.y == 0)
         {
-            hasJumped = false;
-            transform.SetParent(parent.transform);
-        }
-        else if(parent != null)
-        {
-            transform.SetParent(parent.transform);
+            if(!platformBound)
+            {
+                hasJumped = false;
+                transform.SetParent(parent.transform);
+
+                if(move != null)
+                {
+                    move();
+                }
+            } 
+            else if (parent != null)
+            {
+                transform.SetParent(parent.transform);
+            }
         }
     }
     public void Jump()
@@ -60,11 +70,17 @@ public class Player : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.tag == "MainCamera")
+        {
+            platformBound = true;
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-
+        if (collision.tag == "MainCamera")
+        {
+            platformBound = false;
+        }
     }
 
 
