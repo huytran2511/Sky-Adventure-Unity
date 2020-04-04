@@ -28,7 +28,7 @@ public class BackgroundCollector : MonoBehaviour
         if(collision.tag == "Background")
         {
             Vector3 temp = collision.transform.position;
-            float height = ((BoxCollider2D)collision).size.y;
+            float height = ((BoxCollider2D)collision).size.y - 0.018f;
             temp.y = firstY + height;
             collision.transform.position = temp;
             firstY = temp.y;

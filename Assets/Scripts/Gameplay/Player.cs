@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     {
         if(playerBody.velocity.y == 0)
         {
-            playerBody.velocity = new Vector2(0, 13);
+            playerBody.velocity = new Vector2(0, 12);
             transform.SetParent(null);
             hasJumped = true;
             //if (Input.GetKeyDown("space"))
