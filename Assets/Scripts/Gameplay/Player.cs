@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
                 hasJumped = false;
                 transform.SetParent(parent.transform);
 
+                GameMechanics.instance.CreatePlatform();
+
                 if(move != null)
                 {
                     move();
@@ -46,7 +48,8 @@ public class Player : MonoBehaviour
     {
         if(playerBody.velocity.y == 0)
         {
-            playerBody.velocity = new Vector2(0, 10);
+            playerBody.velocity = new Vector2(0, 13);
+            transform.SetParent(null);
             hasJumped = true;
             //if (Input.GetKeyDown("space"))
             //{
