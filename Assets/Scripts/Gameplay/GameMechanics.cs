@@ -50,18 +50,18 @@ public class GameMechanics : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void GoHome()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
     public void Credits()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Credits");
     }
 }
