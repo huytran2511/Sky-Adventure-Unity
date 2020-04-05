@@ -7,7 +7,7 @@ using TMPro;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D playerBody;
-    private Button jumpButton;
+    //private Button jumpButton;
     private bool hasJumped, platformBound;
 
     public delegate void MoveCamera();
@@ -24,8 +24,9 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-        jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
-        jumpButton.onClick.AddListener(() => Jump());
+        //jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
+        //jumpButton.onClick.AddListener(() => Jump());
+        
 
         playerBody = GetComponent<Rigidbody2D>();
 
@@ -41,7 +42,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if(hasJumped && playerBody.velocity.y == 0)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            Jump();
+        }
+
+        if (hasJumped && playerBody.velocity.y == 0)
         {
             if(!platformBound)
             {
