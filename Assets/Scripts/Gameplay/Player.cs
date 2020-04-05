@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
     private TMP_Text scoreText;
     private int score = 0;
 
-    private AudioSource jumpSESource;
+    public AudioSource[] sounds;
+    public AudioSource jumpSound, landSound;
 
 
     void Awake()
@@ -34,7 +35,9 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        jumpSESource = GetComponent<AudioSource>();
+        sounds = GetComponents<AudioSource>();
+        jumpSound = sounds[0];
+        landSound = sounds[1];
     }
     void Update()
     {
@@ -42,6 +45,7 @@ public class Player : MonoBehaviour
         {
             if(!platformBound)
             {
+                landSound.Play();
                 hasJumped = false;
 
                 score++;
@@ -70,7 +74,7 @@ public class Player : MonoBehaviour
             transform.SetParent(null);
             hasJumped = true;
 
-            jumpSESource.Play();
+            jumpSound.Play();
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
