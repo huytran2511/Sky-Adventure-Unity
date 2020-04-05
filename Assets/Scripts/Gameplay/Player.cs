@@ -17,7 +17,10 @@ public class Player : MonoBehaviour
 
     private TMP_Text scoreText;
     private int score = 0;
-    
+
+    private AudioSource jumpSESource;
+
+
     void Awake()
     {
         jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
@@ -29,6 +32,10 @@ public class Player : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    void Start()
+    {
+        jumpSESource = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if(hasJumped && playerBody.velocity.y == 0)
@@ -62,10 +69,8 @@ public class Player : MonoBehaviour
             playerBody.velocity = new Vector2(0, 12);
             transform.SetParent(null);
             hasJumped = true;
-            //if (Input.GetKeyDown("space"))
-            //{
-            //    playerBody.velocity = new Vector2(0, 10);
-            //}
+
+            jumpSESource.Play();
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
