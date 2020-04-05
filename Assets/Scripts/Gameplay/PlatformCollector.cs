@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlatformCollector : MonoBehaviour
 {
-    void Start()
+    private GameObject panel;
+    
+    void Awake()
     {
-        
+        panel = GameObject.Find("GameOver");
+        panel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +22,7 @@ public class PlatformCollector : MonoBehaviour
         if(collision.tag == "Player")
         {
             Time.timeScale = 0f;
+            panel.SetActive(true);
         }
     }
 

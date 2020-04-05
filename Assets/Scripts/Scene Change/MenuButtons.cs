@@ -7,12 +7,14 @@ public class MenuButtons : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Gameplay");
     }
+
     public void GoHome()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
+
     public void QuitGame()
     {
         Debug.Log("QUIT");

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMechanics : MonoBehaviour
 {
@@ -45,5 +46,22 @@ public class GameMechanics : MonoBehaviour
         newPlatform.name = "Platform" + platformCount;
 
         platformCount++;
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GoHome()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Credits()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Credits");
     }
 }

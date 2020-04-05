@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Player : MonoBehaviour
     public static event MoveCamera move;
 
     private GameObject parent;
+
+    private TMP_Text scoreText;
+    private int score = 0;
     
     void Awake()
     {
@@ -20,6 +24,9 @@ public class Player : MonoBehaviour
         jumpButton.onClick.AddListener(() => Jump());
 
         playerBody = GetComponent<Rigidbody2D>();
+
+        scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
+        scoreText.text = score.ToString();
     }
 
     void Update()
@@ -29,6 +36,10 @@ public class Player : MonoBehaviour
             if(!platformBound)
             {
                 hasJumped = false;
+
+                score++;
+                scoreText.text = score.ToString();
+
                 transform.SetParent(parent.transform);
 
                 GameMechanics.instance.CreatePlatform();
