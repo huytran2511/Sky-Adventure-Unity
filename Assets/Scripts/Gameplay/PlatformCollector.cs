@@ -5,11 +5,17 @@ using UnityEngine;
 public class PlatformCollector : MonoBehaviour
 {
     private GameObject panel;
+    private AudioSource gameOver;
     
     void Awake()
     {
         panel = GameObject.Find("GameOver");
         panel.SetActive(false);
+    }
+
+    void Start()
+    {
+        gameOver = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +29,7 @@ public class PlatformCollector : MonoBehaviour
         {
             Time.timeScale = 0f;
             panel.SetActive(true);
+            gameOver.Play();
         }
     }
 
