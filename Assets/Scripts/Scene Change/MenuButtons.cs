@@ -8,6 +8,7 @@ public class MenuButtons : MonoBehaviour
     public void PlayGame()
     {
         Time.timeScale = 1f;
+        Player.score = 0;
         SceneManager.LoadScene("Gameplay");
     }
 

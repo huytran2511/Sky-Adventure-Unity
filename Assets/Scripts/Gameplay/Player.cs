@@ -16,7 +16,11 @@ public class Player : MonoBehaviour
     private GameObject parent;
 
     private TMP_Text scoreText;
-    private int score = 0;
+    private TMP_Text highscore_GOText;
+    
+
+    public static int score = 0;
+    public static int highscore = 0;
 
     public AudioSource[] sounds;
     public AudioSource jumpSound, landSound;
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
 
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
+        highscore_GOText = GameObject.Find("HighScore_GO").GetComponent<TMP_Text>();
         scoreText.text = score.ToString();
     }
 
@@ -56,6 +61,13 @@ public class Player : MonoBehaviour
 
                 score++;
                 scoreText.text = score.ToString();
+                
+                if(score >= highscore)
+                {
+                    highscore = score;
+                }
+
+                highscore_GOText.text = "High Score: " + highscore.ToString();
 
                 transform.SetParent(parent.transform);
 
