@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         {
             if(!platformBound)
             {
-                landSound.Play();
+                //landSound.Play();
                 hasJumped = false;
 
                 score++;
@@ -99,6 +99,10 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Platform")
         {
+            if(playerBody.velocity.y == 0)
+            {
+                landSound.Play();
+            }
             parent = collision.gameObject;
         }
     }
