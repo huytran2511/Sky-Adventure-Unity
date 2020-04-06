@@ -5,9 +5,9 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     private float BOUND_S = 3.36f, BOUND_M = 2.89f, BOUND_L = 2.43f;
-    private float MEDIUM = 2f, FAST = 3f, XTFAST = 4f, XXTFAST = 5f;
+    //private float MEDIUM = 2f, FAST = 3f, XTFAST = 4f, XXTFAST = 5f;
     
-    private float leftBound = -2.43f, rightBound = 2.43f; //
+    private float leftBound = 0f, rightBound = 0f; //
     
     private float speed = 1f; // slow
     private static float speedChange = 0f;

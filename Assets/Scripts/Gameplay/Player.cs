@@ -69,7 +69,6 @@ public class Player : MonoBehaviour
                 highscore_GOText.text = "High Score: " + highscore.ToString();
 
                 transform.SetParent(parent.transform);
-
                 GameMechanics.instance.CreatePlatform();
 
                 if(move != null)
