@@ -5,15 +5,12 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     private float BOUND_S = 3.36f, BOUND_M = 2.89f, BOUND_L = 2.43f;
-    private float MEDIUM = 2f, FAST = 3f, XTFAST = 4f;
+    private float MEDIUM = 2f, FAST = 3f, XTFAST = 4f, XXTFAST = 5f;
     
-    //private float leftBound = -3.36f, rightBound = 3.36f; // S size 0.4
-    //private float leftBound = -2.89f, rightBound = 2.89f; // M size 0.7
-    private float leftBound = -2.43f, rightBound = 2.43f; // L size 1
+    private float leftBound = -2.43f, rightBound = 2.43f; //
     
-    //private float speed = 1f; // slow
-    //private float speed = 2f; // medium
-    private float speed = 1f; // fast
+    private float speed = 1f; // slow
+    private static float speedChange = 0f;
 
     private bool left;
     
@@ -29,21 +26,39 @@ public class Platform : MonoBehaviour
 
     private void PlatformSetting()
     {
-        //if (Random.Range(0, 2) == 0)
-        //{
-        //    left = true;
-        //}
-        //else
-        //{
-        //    left = false;
-        //}
-        if (Player.score >= 5)
-            speed = MEDIUM;
-        if (Player.score >= 10)
-            speed = FAST;
-        if (Player.score >= 15)
-            speed = XTFAST;
+        //if (Player.score >= 3)
+        //    speed = MEDIUM;
+        //if (Player.score >= 6)
+        //    speed = FAST;
+        //if (Player.score >= 9)
+        //    speed = XTFAST;
+        //if (Player.score >= 12)
+        //    speed = XXTFAST;
 
+        //if (Player.score == 0)
+        //    speed = 1f;
+        if(Player.score == 0)
+        {
+            speedChange = 0f;
+        }
+        if(Player.score > 0)
+        {
+            if (Player.score % 3 == 0)
+            {
+                speedChange += 0.5f;
+            }
+            speed += speedChange;
+        }
+
+        //switch (Random.Range(0, 2))
+        //{
+        //    case 0:
+        //        left = true;
+        //        break;
+        //    case 1:
+        //        left = false;
+        //        break;
+        //}
         switch (Random.Range(0, 6))
         {
             case 0:
@@ -82,7 +97,6 @@ public class Platform : MonoBehaviour
                 leftBound = -BOUND_L;
                 rightBound = BOUND_L;
                 break;
-
         }
     }
 
