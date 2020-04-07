@@ -118,7 +118,7 @@ public class Platform : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Lv2")
         {
-            if (Player.score == 5)
+            if (Player.score == 10)
             {
                 gameObject.transform.localScale = new Vector3(2.56f, 1, 1);
                 speed = 0f;

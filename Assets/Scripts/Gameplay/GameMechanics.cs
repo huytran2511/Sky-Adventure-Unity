@@ -48,6 +48,20 @@ public class GameMechanics : MonoBehaviour
         platformCount++;
     }
 
+    public void ToLv2()
+    {
+        Time.timeScale = 1f;
+        Player.score = 0;
+        SceneManager.LoadScene("Lv2");
+    }
+
+    public void ToLv3()
+    {
+        Time.timeScale = 1f;
+        Player.score = 0;
+        SceneManager.LoadScene("Lv3");
+    }
+
     public void Restart()
     {
         Time.timeScale = 1f;

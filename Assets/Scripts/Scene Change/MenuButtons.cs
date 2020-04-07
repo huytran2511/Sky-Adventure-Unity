@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public void PlayGame()
+    public void NormalMode()
+    {
+        Time.timeScale = 1f;
+        Player.score = 0;
+        SceneManager.LoadScene("Lv1");
+    }
+
+    public void EndlessMode()
     {
         Time.timeScale = 1f;
         Player.score = 0;
