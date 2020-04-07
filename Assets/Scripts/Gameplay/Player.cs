@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -23,7 +24,9 @@ public class Player : MonoBehaviour
     public static int highscore = 0;
 
     public AudioSource[] sounds;
-    public AudioSource jumpSound, landSound;
+    public AudioSource jumpSound, landSound, winningSound;
+
+    public GameObject FinishMenuUI; //finish UI
 
 
     void Awake()
@@ -31,12 +34,20 @@ public class Player : MonoBehaviour
         jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
         jumpButton.onClick.AddListener(() => Jump());
         
-
         playerBody = GetComponent<Rigidbody2D>();
 
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
         highscore_GOText = GameObject.Find("HighScore_GO").GetComponent<TMP_Text>();
         scoreText.text = score.ToString();
+
+        //testing finish UI
+        if(SceneManager.GetActiveScene().name != "EndlessGameMode")
+        {
+            Debug.Log("not endless mode");
+            FinishMenuUI = GameObject.Find("FinishMenu");
+            FinishMenuUI.SetActive(false);
+        }
+        
     }
 
     void Start()
@@ -44,6 +55,10 @@ public class Player : MonoBehaviour
         sounds = GetComponents<AudioSource>();
         jumpSound = sounds[0];
         landSound = sounds[1];
+        if (SceneManager.GetActiveScene().name != "EndlessGameMode")
+        {
+            winningSound = sounds[2];
+        }
     }
     void Update()
     {
@@ -100,6 +115,18 @@ public class Player : MonoBehaviour
             if(playerBody.velocity.y == 0)
             {
                 landSound.Play();
+                
+                //when in lv3 scene
+                if (SceneManager.GetActiveScene().name == "Lv3")
+                {
+                    if (score == 15)
+                    {
+                        FinishMenuUI.SetActive(true);
+                        Time.timeScale = 0f;
+                        winningSound.Play();
+                    }
+                }
+                
             }
             parent = collision.gameObject;
         }

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlatformCollector : MonoBehaviour
 {
-    private GameObject panel;
-    private AudioSource gameOver;
+    private GameObject gameOverMenuUI;
+    private AudioSource gameOverSound;
     
     void Awake()
     {
-        panel = GameObject.Find("GameOver");
-        panel.SetActive(false);
+        gameOverMenuUI = GameObject.Find("GameOver");
+        gameOverMenuUI.SetActive(false);
     }
 
     void Start()
     {
-        gameOver = GetComponent<AudioSource>();
+        gameOverSound = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,8 +28,8 @@ public class PlatformCollector : MonoBehaviour
         if(collision.tag == "Player")
         {
             Time.timeScale = 0f;
-            panel.SetActive(true);
-            gameOver.Play();
+            gameOverMenuUI.SetActive(true);
+            gameOverSound.Play();
         }
     }
 

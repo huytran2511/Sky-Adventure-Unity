@@ -9,7 +9,7 @@ public class MenuButtons : MonoBehaviour
     {
         Time.timeScale = 1f;
         Player.score = 0;
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("EndlessGameMode");
     }
 
     public void GoHome()
