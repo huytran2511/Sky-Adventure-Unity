@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 208}
+  m_AnchoredPosition: {x: 0, y: 291}
   m_SizeDelta: {x: 140.9, y: -160.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125686761
@@ -1823,7 +1823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &839083758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2699,7 +2699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1472079784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2913,7 +2913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -74.92999}
+  m_AnchoredPosition: {x: 0, y: -103.71}
   m_SizeDelta: {x: 90, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548665562
@@ -3272,8 +3272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000076293945, y: 61}
-  m_SizeDelta: {x: 293.75, y: -42.410004}
+  m_AnchoredPosition: {x: 0, y: 92}
+  m_SizeDelta: {x: 293.8, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562199552
 MonoBehaviour:
@@ -3293,12 +3293,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Only those with a pure heart can ride the clouds. Help Jack explore the
-    sky in this endless adventure! The higher you go, the stronger wind blows, and
-    the faster clouds travel!
+  m_text: 'Only those with a pure heart can ride the clouds
+
+
+    NORMAL MODE: Help Jack back to his house in the sky
+
+
+    ENDLESS MODE: Help Jack explore the sky in this endless adventure! The higher
+    you go, the stronger wind blows, and the faster clouds travel!
 
 
     Press SPACE or ENTER or LEFT-CLICK to jump
+
 
     Press ESCAPE to pause'
   m_isRightToLeft: 0
@@ -3335,7 +3341,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3369,12 +3375,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1562199552}
-    characterCount: 242
+    characterCount: 310
     spriteCount: 0
-    spaceCount: 44
-    wordCount: 44
+    spaceCount: 60
+    wordCount: 57
     linkCount: 0
-    lineCount: 7
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
