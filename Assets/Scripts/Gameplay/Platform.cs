@@ -64,7 +64,7 @@ public class Platform : MonoBehaviour
                 rightBound = BOUND_L;
                 break;
         }
-        
+
         //switch (Random.Range(0, 6))
         //{
         //    case 0:
@@ -105,9 +105,30 @@ public class Platform : MonoBehaviour
         //        break;
         //}
 
+        if (SceneManager.GetActiveScene().name == "Lv1")
+        {
+            if (Player.score == 5)
+            {
+                gameObject.transform.localScale = new Vector3(2.56f, 1, 1);
+                speed = 0f;
+
+                gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Lv2")
+        {
+            if (Player.score == 5)
+            {
+                gameObject.transform.localScale = new Vector3(2.56f, 1, 1);
+                speed = 0f;
+
+                gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
+            }
+        }
+
         if (SceneManager.GetActiveScene().name == "Lv3") 
         {
-            //Debug.Log("true");
             if (Player.score == 15)
             {
                 gameObject.transform.localScale = new Vector3(2.56f, 1, 1);
@@ -116,7 +137,6 @@ public class Platform : MonoBehaviour
                 gameObject.transform.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
             }
         }
-        //else Debug.Log("false");
     }
 
     private void MovePlatform()

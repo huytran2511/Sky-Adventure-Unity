@@ -115,8 +115,29 @@ public class Player : MonoBehaviour
             if(playerBody.velocity.y == 0)
             {
                 landSound.Play();
-                
-                //when in lv3 scene
+
+                // lv1 scene
+                if (SceneManager.GetActiveScene().name == "Lv1")
+                {
+                    if (score == 5)
+                    {
+                        FinishMenuUI.SetActive(true);
+                        Time.timeScale = 0f;
+                        winningSound.Play();
+                    }
+                }
+                // lv2 scene
+                if (SceneManager.GetActiveScene().name == "Lv2")
+                {
+                    if (score == 10)
+                    {
+                        FinishMenuUI.SetActive(true);
+                        Time.timeScale = 0f;
+                        winningSound.Play();
+                    }
+                }
+
+                //lv3 scene
                 if (SceneManager.GetActiveScene().name == "Lv3")
                 {
                     if (score == 15)
