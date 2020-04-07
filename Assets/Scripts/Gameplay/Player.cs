@@ -18,8 +18,7 @@ public class Player : MonoBehaviour
 
     private TMP_Text scoreText;
     private TMP_Text highscore_GOText;
-    
-
+   
     public static int score = 0;
     public static int highscore = 0;
 
@@ -75,11 +74,15 @@ public class Player : MonoBehaviour
 
                 score++;
                 scoreText.text = score.ToString();
-                
-                if(score > highscore)
+
+                if (SceneManager.GetActiveScene().name == "EndlessGameMode")
                 {
-                    highscore = score;
+                    if (score > highscore)
+                    {
+                        highscore = score;
+                    }
                 }
+                
 
                 highscore_GOText.text = "High Score: " + highscore.ToString();
 
