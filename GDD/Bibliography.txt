@@ -1,0 +1,30 @@
+**** CREDITS ****
+
+
+=== Game Design ===
+
+Huy Tran
+
+=== Art ===
+
+Huy Tran
+
+=== Font ===
+
+LiberationSans SDF - TextMesh Pro
+
+=== Music ===
+
+Background Music: You're Perfect Studio - https://opengameart.org/content/up-in-the-sky
+
+=== Sound Effects ===
+
+- Jumping: Damaged Panda - https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
+- Landing: MentalSanityOff - https://opengameart.org/content/jump-landing-sound
+- Game Over: den_yes - https://opengameart.org/content/game-over-soundold-school
+- Winning: spuispuin - https://opengameart.org/content/won-orchestral-winning-jingle
+
+=== Code ===
+...
+...
+...
