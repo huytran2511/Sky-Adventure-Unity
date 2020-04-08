@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public static event MoveCamera move;
 
     private GameObject parent;
+    public GameObject FinishMenuUI;
 
     private TMP_Text scoreText;
     private TMP_Text highscore_GOText;
@@ -24,9 +25,6 @@ public class Player : MonoBehaviour
 
     public AudioSource[] sounds;
     public AudioSource jumpSound, landSound, winningSound;
-
-    public GameObject FinishMenuUI; //finish UI
-
 
     void Awake()
     {
@@ -39,14 +37,11 @@ public class Player : MonoBehaviour
         highscore_GOText = GameObject.Find("HighScore_GO").GetComponent<TMP_Text>();
         scoreText.text = score.ToString();
 
-        //testing finish UI
         if(SceneManager.GetActiveScene().name != "EndlessGameMode")
         {
-            Debug.Log("not endless mode");
             FinishMenuUI = GameObject.Find("FinishMenu");
             FinishMenuUI.SetActive(false);
         }
-        
     }
 
     void Start()

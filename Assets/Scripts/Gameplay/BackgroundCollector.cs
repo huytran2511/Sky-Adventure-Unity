@@ -7,7 +7,6 @@ public class BackgroundCollector : MonoBehaviour
     private GameObject[] backgrounds;
     private float firstY;
 
-
     void Awake()
     {
         backgrounds = GameObject.FindGameObjectsWithTag("Background");
