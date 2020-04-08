@@ -2162,11 +2162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9301a867bc74840b2ca0181364e16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FinishMenuUI: {fileID: 0}
   sounds: []
   jumpSound: {fileID: 0}
   landSound: {fileID: 0}
   winningSound: {fileID: 0}
-  FinishMenuUI: {fileID: 0}
 --- !u!82 &916569107
 AudioSource:
   m_ObjectHideFlags: 0

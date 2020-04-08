@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     public AudioSource[] sounds;
     public AudioSource jumpSound, landSound, winningSound;
 
+    public static bool winLv1 = false, winLv2 = false;
+
     void Awake()
     {
         jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
@@ -122,6 +124,7 @@ public class Player : MonoBehaviour
                         FinishMenuUI.SetActive(true);
                         Time.timeScale = 0f;
                         winningSound.Play();
+                        winLv1 = true;
                     }
                 }
                 // lv2 scene
@@ -132,6 +135,7 @@ public class Player : MonoBehaviour
                         FinishMenuUI.SetActive(true);
                         Time.timeScale = 0f;
                         winningSound.Play();
+                        winLv2 = true;
                     }
                 }
 
