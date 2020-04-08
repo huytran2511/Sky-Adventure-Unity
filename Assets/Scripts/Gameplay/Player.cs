@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     private GameObject parent;
     public GameObject FinishMenuUI;
+    public static bool finish = false;
 
     private TMP_Text scoreText;
     private TMP_Text highscore_GOText;
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
         {
             FinishMenuUI = GameObject.Find("FinishMenu");
             FinishMenuUI.SetActive(false);
+            finish = false;
         }
     }
 
@@ -122,6 +124,7 @@ public class Player : MonoBehaviour
                     if (score == 5)
                     {
                         FinishMenuUI.SetActive(true);
+                        finish = true;
                         Time.timeScale = 0f;
                         winningSound.Play();
                         winLv1 = true;
@@ -133,6 +136,7 @@ public class Player : MonoBehaviour
                     if (score == 10)
                     {
                         FinishMenuUI.SetActive(true);
+                        finish = true;
                         Time.timeScale = 0f;
                         winningSound.Play();
                         winLv2 = true;
@@ -145,6 +149,7 @@ public class Player : MonoBehaviour
                     if (score == 15)
                     {
                         FinishMenuUI.SetActive(true);
+                        finish = true;
                         Time.timeScale = 0f;
                         winningSound.Play();
                     }

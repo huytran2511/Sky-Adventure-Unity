@@ -7,9 +7,7 @@ using TMPro;
 public class PauseMenu : MonoBehaviour
 {
     public static bool gamePaused = false;
-
     private TMP_Text highscore_PMText;
-
     public GameObject pauseMenuUI;
 
     void Awake()
@@ -19,15 +17,18 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(!PlatformCollector.gameOver && !Player.finish)
         {
-            if (gamePaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (gamePaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
         highscore_PMText.text = "High Score: " + Player.highscore.ToString();
