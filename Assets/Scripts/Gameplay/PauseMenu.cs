@@ -19,7 +19,6 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        highscore_PMText.text = "High Score: " + Player.highscore.ToString();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gamePaused)
@@ -31,6 +30,7 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+        highscore_PMText.text = "High Score: " + Player.highscore.ToString();
     }
 
     public void Resume()
@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        gamePaused = false;
         Time.timeScale = 1f;
         Player.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -56,6 +57,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GoHome()
     {
+        gamePaused = false;
         Time.timeScale = 1f;
         Player.score = 0;
         SceneManager.LoadScene("MainMenu");
