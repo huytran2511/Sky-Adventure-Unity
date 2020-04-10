@@ -10,7 +10,6 @@ public class BackgroundCollector : MonoBehaviour
     void Awake()
     {
         backgrounds = GameObject.FindGameObjectsWithTag("Background");
-
         firstY = backgrounds[0].transform.position.y;
 
         for(int i = 1; i < backgrounds.Length; i++)

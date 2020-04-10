@@ -18,12 +18,7 @@ public class GameMechanics : MonoBehaviour
         SingletonInit();
         CreatePlatform();
     }
-
-    void Update()
-    {
-        
-    }
-
+    
     void OnDisable()
     {
         instance = null;
@@ -40,11 +35,9 @@ public class GameMechanics : MonoBehaviour
     public void CreatePlatform()
     {
         lastPlatformPositionY += PLATFORM_DISTANCE;
-
         GameObject newPlatform = Instantiate(platform);
         newPlatform.transform.position = new Vector3(0, lastPlatformPositionY, 0);
         newPlatform.name = "Platform" + platformCount;
-
         platformCount++;
     }
 
@@ -75,6 +68,7 @@ public class GameMechanics : MonoBehaviour
         Player.score = 0;
         SceneManager.LoadScene("MainMenu");
     }
+
     public void Credits()
     {
         Time.timeScale = 1f;

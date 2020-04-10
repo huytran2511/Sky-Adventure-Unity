@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
         highscore_PMText = GameObject.Find("HighScore_PM").GetComponent<TMP_Text>();
         pauseMenuUI.SetActive(false);
     }
+
     void Update()
     {
         if(!PlatformCollector.gameOver && !Player.finish)
@@ -63,6 +64,7 @@ public class PauseMenu : MonoBehaviour
         Player.score = 0;
         SceneManager.LoadScene("MainMenu");
     }
+
     public void QuitGame()
     {
         Debug.Log("QUIT");

@@ -36,5 +36,4 @@ public class PlatformCollector : MonoBehaviour
             gameOverSound.Play();
         }
     }
-
 }

@@ -82,7 +82,6 @@ public class Player : MonoBehaviour
                     }
                 }
                 
-
                 highscore_GOText.text = "High Score: " + highscore.ToString();
 
                 transform.SetParent(parent.transform);
@@ -106,7 +105,6 @@ public class Player : MonoBehaviour
             playerBody.velocity = new Vector2(0, 12);
             transform.SetParent(null);
             hasJumped = true;
-
             jumpSound.Play();
         }
     }
@@ -118,7 +116,6 @@ public class Player : MonoBehaviour
             {
                 landSound.Play();
 
-                // lv1 scene
                 if (SceneManager.GetActiveScene().name == "Lv1")
                 {
                     if (score == 5)
@@ -130,7 +127,7 @@ public class Player : MonoBehaviour
                         winLv1 = true;
                     }
                 }
-                // lv2 scene
+
                 if (SceneManager.GetActiveScene().name == "Lv2")
                 {
                     if (score == 10)
@@ -143,7 +140,6 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                //lv3 scene
                 if (SceneManager.GetActiveScene().name == "Lv3")
                 {
                     if (score == 15)
@@ -154,7 +150,6 @@ public class Player : MonoBehaviour
                         winningSound.Play();
                     }
                 }
-                
             }
             parent = collision.gameObject;
         }
@@ -180,6 +175,4 @@ public class Player : MonoBehaviour
             platformBound = false;
         }
     }
-
-
 }

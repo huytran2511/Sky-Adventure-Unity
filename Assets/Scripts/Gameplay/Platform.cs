@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Platform : MonoBehaviour
 {
     private float BOUND_S = 3.36f, BOUND_M = 2.89f, BOUND_L = 2.43f;
-    //private float MEDIUM = 2f, FAST = 3f, XTFAST = 4f, XXTFAST = 5f;
     
     private float leftBound = 0f, rightBound = 0f;
     
@@ -27,18 +26,6 @@ public class Platform : MonoBehaviour
 
     private void PlatformSetting()
     {
-        //if (Player.score >= 3)
-        //    speed = MEDIUM;
-        //if (Player.score >= 6)
-        //    speed = FAST;
-        //if (Player.score >= 9)
-        //    speed = XTFAST;
-        //if (Player.score >= 12)
-        //    speed = XXTFAST;
-
-        //if (Player.score == 0)
-        //    speed = 1f;
-
         if (SceneManager.GetActiveScene().name == "Lv1")
         {         
             switch (Random.Range(0, 2))

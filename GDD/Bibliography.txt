@@ -1,30 +1,50 @@
-**** CREDITS ****
-
-
-=== Game Design ===
+==== GAME DESIGN ====
 
 Huy Tran
+Inspired by Doodle Jump tutorial by Brackeys
 
-=== Art ===
 
-Huy Tran
+==== ART ====
 
-=== Font ===
+
+All sprites and arts are created by me (Huy Tran)
+
+
+==== FONT ====
+
 
 LiberationSans SDF - TextMesh Pro
 
-=== Music ===
 
-Background Music: You're Perfect Studio - https://opengameart.org/content/up-in-the-sky
+==== MUSIC ====
 
-=== Sound Effects ===
+Background Mu
+sic: Up In The Sky - You're Perfect Studio https://opengameart.org/content/up-in-the-sky
 
-- Jumping: Damaged Panda - https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
-- Landing: MentalSanityOff - https://opengameart.org/content/jump-landing-sound
-- Game Over: den_yes - https://opengameart.org/content/game-over-soundold-school
-- Winning: spuispuin - https://opengameart.org/content/won-orchestral-winning-jingle
 
-=== Code ===
-...
-...
-...
+==== SOUND EFFECTS ====
+
+
+Jumping: Damaged Panda - https://opengameart.org/content/100-plus-game-sound-effects-wavoggm4a
+
+Landing: MentalSanityOff - https://opengameart.org/content/jump-landing-sound
+
+Game Over: den_yes - https://opengameart.org/content/game-over-soundold-school
+
+Winning: spuispuin - https://opengameart.org/content/won-orchestral-winning-jingle
+
+
+==== TUTORIAL & CODE REFERENCES ====
+
+
+Doodle Jump tutorial by Brackeys: https://www.youtube.com/watch?v=fHN-26GEVhA&t=2586s
+
+Continue playing music between scenes (singleton): https://www.youtube.com/watch?v=82Mn8v55nr0
+
+Create a volume slider to change volume: https://www.youtube.com/watch?v=YOaYQrN1oYQ
+
+How to create a pause menu: https://www.youtube.com/watch?v=JivuXdrIHK0
+
+How to put multiple audio sources on 1 gameobject: https://answers.unity.com/questions/175995/can-i-play-multiple-audiosources-from-one-gameobje.html
+
+
