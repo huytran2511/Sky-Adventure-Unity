@@ -1,6 +1,0 @@
-Name: Huy Tran
-Red ID: 818608122
-Game Title:
-Game Platform:
-Game Style:
-Game Repository: https://rijeka.sdsu.edu/hqtran/cs583s20_tran_huy_proj_02
