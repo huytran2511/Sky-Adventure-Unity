@@ -1,5 +1,6 @@
 ==== GAME DESIGN ====
 
+
 Huy Tran
 Inspired by Doodle Jump tutorial by Brackeys
 
@@ -18,8 +19,8 @@ LiberationSans SDF - TextMesh Pro
 
 ==== MUSIC ====
 
-Background Mu
-sic: Up In The Sky - You're Perfect Studio https://opengameart.org/content/up-in-the-sky
+
+Background Music: Up In The Sky - You're Perfect Studio - https://opengameart.org/content/up-in-the-sky
 
 
 ==== SOUND EFFECTS ====
